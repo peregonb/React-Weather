@@ -13,7 +13,6 @@ import {Route} from "react-router-dom";
 import {ContentContainer} from "./components/Content";
 
 const drawerWidth = 240;
-
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
@@ -46,27 +45,27 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 const cities = [
-        {
-            name : "Киев",
-            id : 703448
-        },
-        {
-            name : "Львов",
-            id : 702550
-        },
-        {
-            name : "Донецк",
-            id : 709717
-        },
-        {
-            name : "Харьков",
-            id : 706483
-        },
-        {
-            name : "Днепр",
-            id : 709930
-        },
-    ];
+    {
+        name: "Киев",
+        id: 703448
+    },
+    {
+        name: "Львов",
+        id: 702550
+    },
+    {
+        name: "Донецк",
+        id: 709717
+    },
+    {
+        name: "Харьков",
+        id: 706483
+    },
+    {
+        name: "Днепр",
+        id: 709930
+    },
+];
 
 const App = props => {
     const {container} = props;
@@ -98,7 +97,6 @@ const App = props => {
                 </Toolbar>
             </AppBar>
             <nav className={classes.drawer} aria-label="mailbox folders">
-                {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
                 <Hidden smUp implementation="css">
                     <Drawer
                         container={container}
@@ -110,7 +108,7 @@ const App = props => {
                             paper: classes.drawerPaper,
                         }}
                         ModalProps={{
-                            keepMounted: true, // Better open performance on mobile.
+                            keepMounted: true,
                         }}
                     >
                         <Sidebar cities={cities} classes={classes}/>
